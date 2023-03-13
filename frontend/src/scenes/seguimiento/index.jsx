@@ -41,9 +41,10 @@ const Seguimiento = ({email}) => {
         },[email]
 );
         
-        const url = `http://localhost:8000/getorder/`;
+        
       useEffect(() => {
-            axios.get(url).then((response)=> {
+            const url2 = `http://localhost:8000/getorder/`;
+            axios.get(url2).then((response)=> {
                 console.log(response.data)
                 console.log("E")
                 setPredictions(response.data.result)
